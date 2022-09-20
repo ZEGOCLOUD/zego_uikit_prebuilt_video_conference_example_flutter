@@ -2,80 +2,78 @@
 
 - - -
 
-
 ## Integrate the SDK
 
 ### Add ZegoUIKitPrebuiltVideoConference as dependencies
 
-Run the following code in your project root directory: 
+1. Edit your project's pubspec.yaml and add local project dependencies
 
-```dart
-flutter pub get zego_uikit_prebuilt_video_conference
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  zego_uikit_prebuilt_video_conference: ^1.0.0 # Add this line
 ```
 
-This will add a line like this to your project's `pubspec.yaml` file (and Flutter will automatic run an implicit `flutter pub get`):
+2. Execute the command as shown below under your project's root folder to install all dependencies
 
-```dart
-dependencies:
-  zego_uikit_prebuilt_video_conference: ^1.0.0 # Add this line.
+```
+flutter pub get
 ```
 
 ### Import the SDK
 
-Now in your Dart code, import the prebuilt Video Conference Kit SDK.
+Now in your Dart code, import the prebuilt SDK.
 
 ```dart
-import 'package:zego_uikit_prebuilt_video_conference/zego_uikit_prebuilt_video_conference';
+import 'package:zego_uikit_prebuilt_video_conference/zego_uikit_prebuilt_video_conference.dart';
 ```
 
 ### Using the ZegoUIKitPrebuiltVideoConference in your project
 
-- Go to [ZEGOCLOUD Admin Console\|_blank](https://console.zegocloud.com/), get the `appID` and `appSign` of your project.
-- Specify the `userID` and `userName` for connecting the Video Conference Kit service. 
-- Create a `conferenceID` that represents the video conference you want to start. 
+You can get `appID` and `appSign` from [ZEGOCLOUD's Admin Console](https://console.zegocloud.com/). Pick up the `userID` and `userName` for connecting to ZEGOCLOUD's service. And you should also pick up a `conferenceID` for making a new call.
 
-- `userID` and `conferenceID` can only contain numbers, letters, and underlines (_). 
-- Using the same `conferenceID` will enter the same video conference.
+<div class="mk-hint">
+
+- `userID` and `conferenceID` can only contain numbers, letters, and underlines (_).
+- Users that join the video conference with the same `conferenceID` can talk to each other.
+</div>
+
 
 ```dart
 class VideoConferencePage extends StatelessWidget {
   final String conferenceID;
-
-  const VideoConferencePage({
-    Key? key,
-    required this.conferenceID,
-  }) : super(key: key);
+  
+  const VideoConferencePage({Key? key, required this.conferenceID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: ZegoUIKitPrebuiltVideoConference(
-        appID: /*input your AppID*/,
-        appSign: /*input your AppSign*/,
-        userID: 'user_id',
-        userName: 'user_name',
+    return ZegoUIKitPrebuiltVideoConference(
+        appID: yourAppID,
+        appSign: yourAppSign,
+        userID: userID,
+        userName: userName,
         conferenceID: conferenceID,
         config: ZegoUIKitPrebuiltVideoConferenceConfig(),
-      ),
     );
   }
 }
 ```
 
-Now, you can start a video conference by navigating to this `VideoConferencePage `.
+Now, you can make a new video conference by navigating to this `VideoConferencePage`.
 
 
-## Configure your project
+## Build & Run
 
+### 1. Config your project
 
-- Android:
-1. If your project is created with an old (not the latest) version of Flutter, you will need to open the `your_project/android/app/build.gradle` file, and modify the `compileSdkVersion` to 33.
+#### Android
 
+1. If your project was created with a version of flutter that is not the latest stable, you may need to manually modify compileSdkVersion in `your_project/android/app/build.gradle` to 33
 
 ![compileSdkVersion.png](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/compileSdkVersion.png)
 
-2. Add app permissions.
-Open the file `your_project/app/src/main/AndroidManifest.xml`, and add the following code:
+2. Need to add app permissions, Open the file `your_project/app/src/main/AndroidManifest.xml`, add the following code:
    ```xml
    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
    <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -88,39 +86,30 @@ Open the file `your_project/app/src/main/AndroidManifest.xml`, and add the follo
    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
    <uses-permission android:name="android.permission.WAKE_LOCK" />
    ```
-![permission_android.png](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/permission_android.png)
+![/Pics/ZegoUIKit/Flutter/permission_android.png](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/permission_android.png)
 
-- iOS: 
+#### iOS
 
-To add permissions, open `your_project/ios/Runner/Info.plist`, and add the following code to the `dict` part:
+Need add app permissions, open `your_project/ios/Runner/Info.plist`, add the following code inside the `dict` tag:
 
 ```plist
 <key>NSCameraUsageDescription</key>
-<string>Access permission to camera is required.</string>
+<string>We require camera access to connect to a video conference</string>
 <key>NSMicrophoneUsageDescription</key>
-<string>Access permission to microphone is required.</string>
+<string>We require microphone access to connect to a video conference</string>
 ```
-![permission_ios.png](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/permission_ios.png)
+![/Pics/ZegoUIKit/Flutter/permission_ios.png](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/permission_ios.png)
 
+### 2. Run & Debug
 
-## Run & Test
-
-Now you have finished all the steps!
-
-You can simply click the **Run** or **Debug** to run and test your App on your device.
-
-![run_flutter_project.jpg](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/run_flutter_project.jpg)
+Now you can simply click the **Run** or **Debug** button to build and run your App on your device.
+![/Pics/ZegoUIKit/Flutter/run_flutter_project.jpg](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/Flutter/run_flutter_project.jpg)
 
 ## Related guide
 
-[Custom prebuilt UI](!VideoConferenceKit_Custom_prebuiltUI)
+[Custom prebuilt UI](!ZEGOUIKIT_Custom_prebuilt_UI)
 
 
 ## Resources
 
-<div class="md-grid-list-box">
-  <a href="https://github.com/ZEGOCLOUD/zego_uikit_prebuilt_video_conference_example_flutter/tree/master/video_conference" class="md-grid-item" target="_blank">
-    <div class="grid-title">Sample code</div>
-    <div class="grid-desc">Click here to get the complete sample code.</div>
-  </a>
-</div>
+[Complete Sample Code](https://github.com/ZEGOCLOUD/zego_uikit_prebuilt_video_conference_example/tree/master/basic_call/flutter)
