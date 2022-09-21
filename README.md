@@ -43,5 +43,5 @@ And it includes the business logic with the UI, you can add or remove features a
 - To configure prebuilt UI for a custom experience:
   [Custom Prebuilt UI](https://docs.zegocloud.com/article/14898)
 
-- To finest-grained build a livestream, you may try antoher one:
-  [Express SDK](https://docs.zegocloud.com/article/5540)
+- To finest-grained build a video conference, you may try antoher one:
+  [Try Our Express SDK](https://docs.zegocloud.com/article/5540)
