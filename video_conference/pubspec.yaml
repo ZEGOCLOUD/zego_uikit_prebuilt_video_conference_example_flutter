@@ -36,7 +36,7 @@ dependencies:
 
   # import_sorter: ^4.6.0  # run 'flutter pub run import_sorter:main'
   flutter_screenutil: ^5.5.3+2
-  zego_uikit_prebuilt_video_conference: ^1.1.0
+  zego_uikit_prebuilt_video_conference: ^1.1.1
   fluttertoast: ^8.0.9
 
 dev_dependencies:
