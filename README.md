@@ -6,7 +6,7 @@ And it includes the business logic with the UI, you can add or remove features a
 
 |First comer's view| Later comer's view|
 |---|---|
-|<img src="https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/conference/user1.gif"  width=50%>|<img src="https://storage.zego.im/sdk-doc//Pics/ZegoUIKit/conference/user2.gif"  width=53%>|
+|![one](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/conference/user1.gif)|![group](https://storage.zego.im/sdk-doc//Pics/ZegoUIKit/conference/user2.gif)|
 
 ## When do you need the Video Conference Kit
 
@@ -45,3 +45,5 @@ And it includes the business logic with the UI, you can add or remove features a
 
 - To finest-grained build a video conference, you may try antoher one:
   [Try Our Express SDK](https://docs.zegocloud.com/article/5540)
+
+- If you have any questions regarding bugs and feature requests, visit the [ZEGOCLOUD community](https://discord.gg/EtNRATttyp) or email us at global_support@zegocloud.com.
