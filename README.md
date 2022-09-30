@@ -31,8 +31,8 @@ And it includes the business logic with the UI, you can add or remove features a
 - Extendable top/bottom menu bar
 - Customizable conference title
 - Participant list
-- Live text chat (coming soon)
-- Conference join/leave notifications (coming soon)
+- Live text chat
+- Conference join/leave notifications
 
 
 ## Recommended resources
