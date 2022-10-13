@@ -6,7 +6,7 @@ And it includes the business logic with the UI, you can add or remove features a
 
 |First comer's view| Later comer's view|
 |---|---|
-|![one](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/conference/user1.gif)|![group](https://storage.zego.im/sdk-doc//Pics/ZegoUIKit/conference/user2.gif)|
+|![user1](./images/user1.gif)|![user2](./images/user2.gif)|
 
 ## When do you need the Video Conference Kit
 
