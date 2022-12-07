@@ -12,7 +12,7 @@
 dependencies:
   flutter:
     sdk: flutter
-  zego_uikit_prebuilt_video_conference: ^1.1.8 # Add this line
+  zego_uikit_prebuilt_video_conference: ^1.1.9 # Add this line
 ```
 
 2. Execute the command as shown below under your project's root folder to install all dependencies
