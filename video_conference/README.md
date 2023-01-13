@@ -57,7 +57,9 @@ And it includes the business logic with the UI, you can add or remove features a
 # Quick start
 - - -
 
-<video poster="https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/videos/How_to_build_Video_Conference_using_Flutter.png" src="https://storage.zego.im/sdk-doc/doc/video/ZegoUIKit/How_to_build_Video_Conference_using_Flutter.mp4" width="80%" preload="auto" controls></video>
+Watch the video as belowed:
+
+[![Watch the video](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/videos/How_to_build_Video_Conference_using_Flutter.png)](https://storage.zego.im/sdk-doc/doc/video/ZegoUIKit/How_to_build_Video_Conference_using_Flutter.mp4)
 
 ## Integrate the SDK
 
