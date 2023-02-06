@@ -39,6 +39,9 @@ dependencies:
   flutter_styled_toast: ^2.1.3
   zego_uikit_prebuilt_video_conference: ^1.1.13
 
+dependency_overrides:
+   zego_express_engine: '3.2.0+1'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
