@@ -5,6 +5,9 @@ import 'package:video_conference/constants.dart';
 // Package imports:
 import 'package:zego_uikit_prebuilt_video_conference/zego_uikit_prebuilt_video_conference.dart';
 
+// Project imports:
+import 'common.dart';
+
 class VideoConferencePage extends StatelessWidget {
   final String conferenceID;
 
@@ -22,7 +25,8 @@ class VideoConferencePage extends StatelessWidget {
         userID: localUserID,
         userName: 'user_$localUserID',
         conferenceID: conferenceID,
-        config: ZegoUIKitPrebuiltVideoConferenceConfig(),
+        config: ZegoUIKitPrebuiltVideoConferenceConfig()
+          ..avatarBuilder = customAvatarBuilder,
       ),
     );
   }
