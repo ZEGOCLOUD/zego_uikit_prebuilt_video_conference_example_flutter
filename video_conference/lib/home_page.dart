@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                       context,
                       MaterialPageRoute(builder: (context) {
                         return VideoConferencePage(
-                          conferenceID: conferenceDTextCtrl.text,
+                          conferenceID: conferenceDTextCtrl.text.trim(),
                         );
                       }),
                     );
