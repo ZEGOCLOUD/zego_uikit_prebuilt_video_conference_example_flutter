@@ -8,13 +8,20 @@ import 'package:zego_uikit_prebuilt_video_conference/zego_uikit_prebuilt_video_c
 // Project imports:
 import 'common.dart';
 
-class VideoConferencePage extends StatelessWidget {
+class VideoConferencePage extends StatefulWidget {
   final String conferenceID;
 
   const VideoConferencePage({
     Key? key,
     required this.conferenceID,
   }) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => VideoConferencePageState();
+}
+
+class VideoConferencePageState extends State<VideoConferencePage> {
+  final controller = ZegoUIKitPrebuiltVideoConferenceController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +31,8 @@ class VideoConferencePage extends StatelessWidget {
         appSign: yourAppSign /*input your AppSign*/,
         userID: localUserID,
         userName: 'user_$localUserID',
-        conferenceID: conferenceID,
+        conferenceID: widget.conferenceID,
+        controller: controller,
         config: ZegoUIKitPrebuiltVideoConferenceConfig()
           ..avatarBuilder = customAvatarBuilder,
       ),
