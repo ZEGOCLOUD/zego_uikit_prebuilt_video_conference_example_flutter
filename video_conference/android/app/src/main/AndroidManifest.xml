@@ -12,7 +12,11 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE"/>
 
-   <application
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+
+
+    <application
         android:label="ZegoUIKitVideoConference"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
