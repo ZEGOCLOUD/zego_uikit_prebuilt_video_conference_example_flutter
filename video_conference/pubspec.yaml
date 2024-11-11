@@ -16,8 +16,8 @@ dependencies:
   cached_network_image: ^3.3.0
   radio_group_v2: ^3.2.0
 
-  zego_uikit: ^2.27.14
-  zego_uikit_prebuilt_video_conference: ^2.9.3
+  zego_uikit: ^2.28.0
+  zego_uikit_prebuilt_video_conference: ^2.9.5
   permission_handler: ^11.3.1
 
 dev_dependencies:
