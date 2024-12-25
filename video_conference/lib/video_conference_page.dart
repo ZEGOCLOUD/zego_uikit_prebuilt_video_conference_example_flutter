@@ -6,9 +6,6 @@ import 'package:video_conference/settings/defines.dart';
 // Package imports:
 import 'package:zego_uikit_prebuilt_video_conference/zego_uikit_prebuilt_video_conference.dart';
 
-// Project imports:
-import 'common.dart';
-
 class VideoConferencePage extends StatefulWidget {
   final String conferenceID;
 
